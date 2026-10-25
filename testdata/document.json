@@ -1,0 +1,36 @@
+{
+  "version": {"major": 1, "minor": 0},
+  "exporterRpId": "example.com",
+  "exporterDisplayName": "Example manager",
+  "timestamp": 0,
+  "accounts": [{
+    "id": "YWNjb3VudA",
+    "username": "",
+    "email": "",
+    "fullName": "",
+    "collections": [{
+      "id": "Y29sbGVjdGlvbg",
+      "title": "Personal",
+      "items": [{"item": "aXRlbQ"}],
+      "subCollections": [{"id": "c3Vi", "title": "Nested", "items": []}]
+    }],
+    "items": [{
+      "id": "aXRlbQ",
+      "title": "Example login",
+      "subtitle": "",
+      "creationAt": 0,
+      "modifiedAt": 0,
+      "favorite": false,
+      "scope": {
+        "urls": ["https://example.com"],
+        "androidApps": []
+      },
+      "credentials": [
+        {"type": "basic-auth", "username": {"fieldType": "string", "value": "alice"}, "password": {"fieldType": "concealed-string", "value": "synthetic-secret"}},
+        {"type": "future-credential", "opaque": {"counter": 9007199254740993}}
+      ],
+      "tags": ["personal"],
+      "extensions": [{"name": "example.com/settings", "arbitrary": {"value": null}}]
+    }]
+  }]
+}

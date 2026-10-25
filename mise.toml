@@ -1,0 +1,30 @@
+[tools]
+go = "1.27.3"
+
+[tasks.setup]
+description = "Download development tools"
+run = "go mod download"
+
+[tasks.fmt]
+description = "Format Go code"
+run = "go fmt ./..."
+
+[tasks.test]
+description = "Run unit tests"
+run = "go test ./..."
+
+[tasks.test-race]
+description = "Run tests with the race detector"
+run = "go test -race ./..."
+
+[tasks.lint]
+description = "Run static analysis"
+run = ["go vet ./...", "go tool staticcheck ./..."]
+
+[tasks.vuln]
+description = "Check for known vulnerabilities"
+run = "go tool govulncheck ./..."
+
+[tasks.check]
+description = "Run project checks"
+depends = ["test", "lint", "vuln"]
